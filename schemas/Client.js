@@ -5,6 +5,9 @@ const ClientSchema = new mongoose.Schema({
     type: String,
     unique: true,
   },
+  currency: {
+    type: String,
+  },
   netIncome: {
     type: Number,
   },
