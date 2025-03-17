@@ -14,7 +14,7 @@ const ClientSchema = new mongoose.Schema({
   rent: {
     type: String,
   },
-  medicalInsurence: {
+  medicalInsurance: {
     type: String,
   },
   familySupport: {
