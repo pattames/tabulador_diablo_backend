@@ -29,7 +29,8 @@ const createClient = async (req, res) => {
     });
   } catch (error) {
     res.status(500).json({
-      error,
+      message: "Failed to create client",
+      error: error.message,
     });
   }
 };
@@ -46,7 +47,10 @@ const getAllClients = async (req, res) => {
       res.status(200).json({ data: clients });
     }
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(500).json({
+      message: "Failed to retrieve clients",
+      error: error.message,
+    });
   }
 };
 
@@ -62,7 +66,8 @@ const getOneClient = async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({
-      error,
+      message: "Failed to retrieve client",
+      error: error.message,
     });
   }
 };
@@ -81,7 +86,8 @@ const deleteClient = async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({
-      error,
+      message: "Failed to delete client",
+      error: error.message,
     });
   }
 };
