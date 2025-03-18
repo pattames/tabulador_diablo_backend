@@ -5,6 +5,7 @@ const createClient = async (req, res) => {
   try {
     const {
       name,
+      currency,
       netIncome,
       rent,
       medicalInsurence,
@@ -14,6 +15,7 @@ const createClient = async (req, res) => {
     } = req.body;
     const client = await Client.create({
       name,
+      currency,
       netIncome,
       rent,
       medicalInsurence,
